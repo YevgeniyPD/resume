@@ -1,0 +1,182 @@
+html,
+:root {
+    --var-bgcolor: #e7e7e7;
+    --var-fontcolor: #262a2c;
+}
+body {
+    margin: 5px;
+    font-family: Tahoma, sans-serif;
+}
+a:hover,
+.btn:hover {
+    color: #cfaa5a;
+}
+a {
+    color: #262a2c;
+    margin: 0px 2px;
+    text-decoration: none;
+}
+.grid {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-gap: 10px;
+    box-sizing: border-box;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 50px 175px 1fr;
+    grid-template-areas: 
+    "header header"
+    "about feedback"
+    "main feedback"
+    "main feedback"
+    "links links";
+}
+header {
+    grid-area: header;
+    text-align: center;
+    padding: 5px;
+}
+header h2 {
+    margin: 0px;
+}
+about {
+    grid-area: about;
+    display: grid;
+    grid-template-columns: 135px 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 15px;
+    padding: 10px;
+}
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    grid-row-gap: 15px;
+    padding: 10px;
+}
+feedback {
+    grid-area: feedback;
+    display: grid;
+    grid-template-rows: 1fr 50px;
+    grid-gap: 20px;
+    padding: 10px;
+}
+links {
+    grid-area: links;
+    padding: 10px;
+    text-align: center;
+}
+.photo {
+    border-radius: 20px;
+}
+.student h2 {
+margin: 0px 0px 0px 10px;
+}
+.student p {
+    margin: 10px;
+    }
+.block {
+    background-color: #cac9c9;
+    border: 5px solid #cac9c9;
+    border-radius: 20px;
+}
+.hobby ol {
+    margin: 0px;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+.hobby li {
+    padding-bottom: 15px;
+}
+.hobby h2 {
+    margin: 0;
+}
+.job {
+    width: 100%;
+    margin-top: 10px;
+}
+  
+.job td {
+    padding-bottom: 5px;
+}
+.job td:nth-child(1),
+.job td:nth-child(2),
+.job td:nth-child(3) {
+    color: #86898f;
+}
+body {
+    background-color: var(--var-bgcolor);
+    color: var(--var-fontcolor);
+}
+.block-style {
+    border: 2px solid #dddddd;
+    background-color: #dddddd;
+    border-radius: 20px;
+}
+.main {
+    padding: 15px 15px;
+    height: auto;
+  }
+.main h2 {
+    margin: 0;
+}
+.form {
+    padding: 15px 15px 65px 15px;
+    display: flex;
+    flex-direction: column;
+}
+.form h2 {
+    margin: 0px;
+}
+.form-group label {
+    display: block;
+    margin: 20px 10px 10px 10px;
+}
+.height100 {
+    height: 100%;
+}
+.form-style {
+    outline: none;
+    color: #000;
+    box-sizing: border-box;
+    border: 3px solid #cac9c9;
+    border-radius: 20px;
+    width: 100%;
+    background: #cac9c9;
+    padding: 10px;
+    margin: 0px;
+}
+.form-group input {
+    height: 50px;
+}
+.form-group textarea {
+    height: 100%;
+}
+.send {
+    text-align: center;
+    padding: 10px;
+    height: auto;
+}
+.btn {
+    border-style: none;
+    background: none;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+h5 {
+    margin: 0;
+}
+@media (max-width: 770px) {
+    .grid {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "header"
+        "about"
+        "main"
+        "feedback"
+        "feedback"
+        "links";
+    }
+}
